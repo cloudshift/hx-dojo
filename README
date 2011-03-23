@@ -1,0 +1,57 @@
+
+First stab Dojo Api. The current generated api in dojoApi dir. The api.json
+file is straight from the Dojo SDK 1.4.3 in the util/docscripts dir.
+
+Disclaimer: I haven't actually used Dojo, but the api seemed like a nice fit
+for haXe, in that it doesn't use quite as much JS magic, as for example JQuery,
+and is easier to write a generator for. What I really like is it's comprehensive,
+full widget set, jquery like selection, the works.
+
+So, with Node.js on the server, and Dojo on the client, I'm saying haXe/JS is
+starting to kick arse.
+
+Apart from what's missing!
+
+I've only generated classlike objects. There's a lot of stuff which is
+marked without classlike true. The generator has two lists classLike and
+typdefLike which can be added to to add other stuff that's required but
+parsed by default. classLike is anything that's a constructor or used as a
+subclass, typedefLike is anything that is already instantiated and you just
+need a reference to e.g.
+
+static var dojo:Dojo = untyped __js__("dojo");
+
+I've only tried a few functions, I've still got to see how the whole thing
+fits together. There are documentation and api mismatches, e.g. I found
+NodeList.foreach has it's second param optional but it's listed in api.json as
+required. There's going to be lot's of special cases, and the only way to find
+them is to use it.
+
+
+Generating the API
+------------------
+
+To create the api from the api.json then ...
+
+haxe -D nodejs -cp . -cp ../core -js genapi.js -main Create
+
+This requires the bdog-stdhx project and node installed to generate it.
+
+then run
+
+node genapi.js
+
+to generate the dojoApi dir.
+
+Then to test that the api is at least compiling and consistent
+
+haxe -cp . -D nodejs -js all.hs -main All
+
+All.hx is generated during the node genapi.js process to provide a
+compilation of all classes in one place.
+
+For most peeps not interested in tweaking the api just set your cp to the
+dojoApi dir.
+
+The, we can say, minimal to non existent test is in the tests dir :).
+

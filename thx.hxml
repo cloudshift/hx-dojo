@@ -1,0 +1,7 @@
+
+-D nodejs
+-cp ./dojoApi/
+-js genapi.js
+-main Create
+-lib blackdog-bdog
+

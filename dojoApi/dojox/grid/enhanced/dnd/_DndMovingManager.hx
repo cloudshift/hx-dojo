@@ -1,0 +1,50 @@
+package dojox.grid.enhanced.dnd;
+
+extern class _DndMovingManager extends dojox.grid.enhanced.dnd._DndSelectingManager {
+public function new(inGrid:Dynamic):Void;
+public function getGridWidth():Void;
+public function getHScrollBarHeight():Void;
+public function getExceptionalColOffsetWidth():Void;
+public function getGridCoords(noCache:Bool):Void;
+public function createAvatar(width:Int,height:Int,left:Int,top:Int,includeHScroll:Bool):Void;
+public function handleESC(e:Dynamic,select:Dynamic):Void;
+public function cancelDND():Void;
+public function createCoverMover(width:Dynamic,height:Dynamic,left:Dynamic,top:Dynamic,type:Dynamic):Void;
+public function getBorderDiv():Void;
+public function setBorderDiv(width:Int,height:Int,left:Int,top:Int):Void;
+public function removeOtherMovers(id:Int):Void;
+public function addColMovers():Void;
+public function addColMover(leadingBorderIdx:Int,trailingBorderIdx:Int):Void;
+public function normalizeColMoverCoords(leftPosition:Int,rightPosition:Int,leadingBorderIdx:Int,trailingBorderIdx:Int):Void;
+public function moveColBorder(mover:Dynamic,mousePos:Dynamic,borderDIV:Dynamic):Void;
+public function normalizeColBorderHeight(borderDiv:Dynamic,colIdx:Int):Void;
+public function avataDivClick(e:Dynamic):Void;
+public function startMoveCols():Void;
+public function changeCursorState(state:String):Void;
+public function addRowMovers():Void;
+public function addRowMover(from:Dynamic,to:Dynamic):Dynamic;
+public function moveRowBorder(mover:Dynamic,leftTop:Dynamic,borderDIV:Dynamic,mousePos:Dynamic):Void;
+public function autoMoveToPreRow():Void;
+public function autoMoveBorderDivPre():Void;
+public function autoMoveToNextRow():Void;
+public function autoMoveBorderDiv():Void;
+public function startMoveRows():Void;
+public function moveRows(start:Int,end:Int,pageInfo:Dynamic):Void;
+public function clearDrugDivs():Void;
+public function setDrugCoverDivs(inColIndex:Dynamic,inRowIndex:Dynamic):Void;
+public function getPageInfo():Void;
+public function resetCellIdx():Void;
+public function publishRowMove():Void;
+public function keyboardMove(keyEvent:Dynamic):Void;
+public var exceptRowsTo:Int;
+public var exceptColumnsTo:Int;
+public var movers:Array<Dynamic>;
+public var scrollbarHeight:Float;
+public var headerHeight:Dynamic;
+public var movingIgnored:Bool;
+public var srcIndexdelta:Float;
+public var avaOnRowIndex:Float;
+public var drugDestIndex:Float;
+public var drugBefore:Bool;
+
+}

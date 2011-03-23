@@ -1,0 +1,29 @@
+package dojox.editor.plugins;
+
+extern class EntityPalette extends dijit._Widget {
+public function new(prms:Dynamic,?name:Dynamic):Void;
+public function _fillContent(source:Dynamic):Void;
+public function getCachedTemplate(templatePath:Dynamic,?templateString:String,alwaysUseString:Dynamic):String;
+public function focus():Void;
+public function _setCurrent(node:Dynamic):Void;
+public function _setValueAttr(value:String,priorityChange:Dynamic):Void;
+public function onChange(value:String):Void;
+public var templateString:String;
+public var templatePath:String;
+public var widgetsInTemplate:Bool;
+public var declaredClass:Dynamic;
+public var defaultTimeout:Float;
+public var timeoutChangeRate:Float;
+public var value:String;
+public var _xDim:Int;
+public var _yDim:Int;
+public var tabIndex:String;
+public var cellClass:String;
+public var dyeClass:String;
+public var showPreview:Bool;
+public var showCode:Bool;
+public var showEntityName:Bool;
+public var palette:String;
+public var paletteClass:String;
+
+}

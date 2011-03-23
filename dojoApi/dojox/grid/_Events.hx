@@ -1,0 +1,50 @@
+package dojox.grid;
+
+extern class _Events {
+public function onKeyEvent(e:Dynamic):Void;
+public function onContentEvent(e:Dynamic):Void;
+public function onHeaderEvent(e:Dynamic):Void;
+public function onStyleRow(inRow:Dynamic):Void;
+public function onKeyDown(e:Dynamic):Void;
+public function onMouseOver(e:Dynamic):Void;
+public function onMouseOut(e:Dynamic):Void;
+public function onMouseDown(e:Dynamic):Void;
+public function onMouseOverRow(e:Dynamic):Void;
+public function onMouseOutRow(e:Dynamic):Void;
+public function onMouseDownRow(e:Dynamic):Void;
+public function onCellMouseOver(e:Dynamic):Void;
+public function onCellMouseOut(e:Dynamic):Void;
+public function onCellMouseDown(e:Dynamic):Void;
+public function onCellClick(e:Dynamic):Void;
+public function onCellDblClick(e:Dynamic):Void;
+public function onCellContextMenu(e:Dynamic):Void;
+public function onCellFocus(inCell:Dynamic,inRowIndex:Int):Void;
+public function onRowClick(e:Dynamic):Void;
+public function onRowDblClick(e:Dynamic):Void;
+public function onRowMouseOver(e:Dynamic):Void;
+public function onRowMouseOut(e:Dynamic):Void;
+public function onRowMouseDown(e:Dynamic):Void;
+public function onRowContextMenu(e:Dynamic):Void;
+public function onHeaderMouseOver(e:Dynamic):Void;
+public function onHeaderMouseOut(e:Dynamic):Void;
+public function onHeaderCellMouseOver(e:Dynamic):Void;
+public function onHeaderCellMouseOut(e:Dynamic):Void;
+public function onHeaderCellMouseDown(e:Dynamic):Void;
+public function onHeaderClick(e:Dynamic):Void;
+public function onHeaderCellClick(e:Dynamic):Void;
+public function onHeaderDblClick(e:Dynamic):Void;
+public function onHeaderCellDblClick(e:Dynamic):Void;
+public function onHeaderCellContextMenu(e:Dynamic):Void;
+public function onHeaderContextMenu(e:Dynamic):Void;
+public function onStartEdit(inCell:Dynamic,inRowIndex:Int):Void;
+public function onApplyCellEdit(inValue:String,inRowIndex:Int,inFieldIndex:Int):Void;
+public function onCancelEdit(inRowIndex:Int):Void;
+public function onApplyEdit(inRowIndex:Int):Void;
+public function onCanSelect(inRowIndex:Int):Void;
+public function onCanDeselect(inRowIndex:Int):Void;
+public function onSelected(inRowIndex:Int):Void;
+public function onDeselected(inRowIndex:Int):Void;
+public function onSelectionChanged():Void;
+public var cellOverClass:String;
+
+}

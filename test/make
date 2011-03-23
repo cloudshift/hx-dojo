@@ -1,0 +1,2 @@
+
+haxe -cp ../dojoApi -js app.js -main App
